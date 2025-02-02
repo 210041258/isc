@@ -2,6 +2,7 @@
 const pageContent = document.getElementById('pageContent');
 const navButtons = document.querySelectorAll('nav button');
 
+// sgined over here
 navButtons.forEach(button => {
   button.addEventListener('click', () => {
     const page = button.dataset.page;
@@ -11,14 +12,498 @@ navButtons.forEach(button => {
 
 function showPage(page) {
   const pages = {
+      "view_soruces_BSC_CSE":``,
+      "view_soruces_MSC_CSE":``,
+      "view_soruces_BSC_ME":``,
+      "view_soruces_BSC_EEE":``,
+      "view_soruces_BSC_TE":``,
+      "view_soruces_BSC_CEE":``,
+      "view_paper_BSC_CSE":`   
+      <style>
+      /* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+      text-align: center;
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Dropdown Styling */
+#semester-select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  width: 200px;
+  margin-right: 10px;
+}
+
+/* Button Styling */
+#select-semester-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#select-semester-btn:hover {
+  background-color: #0056b3;
+}
+
+/* List View Styling */
+#list-view {
+  margin-top: 20px;
+}
+
+.list-item {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.list-item a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.list-item a:hover {
+  text-decoration: underline;
+}
+      </style>
+      
+      <h2>Select Semester</h2>
+    <select id="semester-select">
+      <option value="1">1st Semester</option>
+      <option value="2">2nd Semester</option>
+      <option value="3">3rd Semester</option>
+      <option value="4">4th Semester</option>
+      <option value="5">5th Semester</option>
+      <option value="6">6th Semester</option>
+      <option value="7">7th Semester</option>
+      <option value="8">8th Semester</option>
+    </select>
+    <button id="select-semester-btn">Select</button>
+  `,
+      "view_paper_MSC_CSE":`   
+          <style>
+      /* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+      text-align: center;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Dropdown Styling */
+#semester-select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  width: 200px;
+  margin-right: 10px;
+}
+
+/* Button Styling */
+#select-semester-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#select-semester-btn:hover {
+  background-color: #0056b3;
+}
+
+/* List View Styling */
+#list-view {
+  margin-top: 20px;
+}
+
+.list-item {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.list-item a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.list-item a:hover {
+  text-decoration: underline;
+}
+      </style>
+      <h2>Select Semester</h2>
+    <select id="semester-select">
+      <option value="1">1st Semester</option>
+      <option value="2">2nd Semester</option>
+      <option value="3">3rd Semester</option>
+      <option value="4">4th Semester</option>
+      <option value="5">5th Semester</option>
+      <option value="6">6th Semester</option>
+      <option value="7">7th Semester</option>
+      <option value="8">8th Semester</option>
+    </select>
+    <button id="select-semester-btn">Select</button>
+  `,
+      "view_paper_BSC_ME":`  
+          <style>
+      /* General Styling */
+body {
+    text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Dropdown Styling */
+#semester-select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  width: 200px;
+  margin-right: 10px;
+}
+
+/* Button Styling */
+#select-semester-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#select-semester-btn:hover {
+  background-color: #0056b3;
+}
+
+/* List View Styling */
+#list-view {
+  margin-top: 20px;
+}
+
+.list-item {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.list-item a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.list-item a:hover {
+  text-decoration: underline;
+}
+      </style>
+      <h2>Select Semester</h2>
+    <select id="semester-select">
+      <option value="1">1st Semester</option>
+      <option value="2">2nd Semester</option>
+      <option value="3">3rd Semester</option>
+      <option value="4">4th Semester</option>
+      <option value="5">5th Semester</option>
+      <option value="6">6th Semester</option>
+      <option value="7">7th Semester</option>
+      <option value="8">8th Semester</option>
+    </select>
+    <button id="select-semester-btn">Select</button>
+  `,
+      "view_paper_BSC_EEE":`  
+          <style>
+          
+      /* General Styling */
+body {
+    text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Dropdown Styling */
+#semester-select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  width: 200px;
+  margin-right: 10px;
+}
+
+/* Button Styling */
+#select-semester-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#select-semester-btn:hover {
+  background-color: #0056b3;
+}
+
+/* List View Styling */
+#list-view {
+  margin-top: 20px;
+}
+
+.list-item {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.list-item a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.list-item a:hover {
+  text-decoration: underline;
+}
+      </style>
+      <h2>Select Semester</h2>
+    <select id="semester-select">
+      <option value="1">1st Semester</option>
+      <option value="2">2nd Semester</option>
+      <option value="3">3rd Semester</option>
+      <option value="4">4th Semester</option>
+      <option value="5">5th Semester</option>
+      <option value="6">6th Semester</option>
+      <option value="7">7th Semester</option>
+      <option value="8">8th Semester</option>
+    </select>
+    <button id="select-semester-btn">Select</button>
+  `,
+      "view_paper_BSC_TE":`      <style>
+      /* General Styling */
+body {
+    text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Dropdown Styling */
+#semester-select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  width: 200px;
+  margin-right: 10px;
+}
+
+/* Button Styling */
+#select-semester-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#select-semester-btn:hover {
+  background-color: #0056b3;
+}
+
+/* List View Styling */
+#list-view {
+  margin-top: 20px;
+}
+
+.list-item {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.list-item a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.list-item a:hover {
+  text-decoration: underline;
+}
+      </style>  <h2>Select Semester</h2>
+    <select id="semester-select">
+      <option value="1">1st Semester</option>
+      <option value="2">2nd Semester</option>
+      <option value="3">3rd Semester</option>
+      <option value="4">4th Semester</option>
+      <option value="5">5th Semester</option>
+      <option value="6">6th Semester</option>
+      <option value="7">7th Semester</option>
+      <option value="8">8th Semester</option>
+    </select>
+    <button id="select-semester-btn">Select</button>
+  `,
+      "view_paper_BSC_CEE":`      <style>
+      /* General Styling */
+body {
+    text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Dropdown Styling */
+#semester-select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  width: 200px;
+  margin-right: 10px;
+}
+
+/* Button Styling */
+#select-semester-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#select-semester-btn:hover {
+  background-color: #0056b3;
+}
+
+/* List View Styling */
+#list-view {
+  margin-top: 20px;
+}
+
+.list-item {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.list-item a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.list-item a:hover {
+  text-decoration: underline;
+}
+      </style>  <h2>Select Semester</h2>
+    <select id="semester-select">
+      <option value="1">1st Semester</option>
+      <option value="2">2nd Semester</option>
+      <option value="3">3rd Semester</option>
+      <option value="4">4th Semester</option>
+      <option value="5">5th Semester</option>
+      <option value="6">6th Semester</option>
+      <option value="7">7th Semester</option>
+      <option value="8">8th Semester</option>
+    </select>
+    <button id="select-semester-btn">Select</button>
+  `,
 "view_sections_paper":`
 <ul class="department-list">
-  <li>BSC CSE</li>
-  <li>MSC CSE</li>
-  <li>BSC ME</li>
-  <li>BSC EEE</li>
-  <li>BSC TE</li>
-  <li>BSC CEE</li>
+  <li onclick="showPage('view_paper_BSC_CSE')">BSC CSE</li>
+  <li onclick="showPage('view_paper_MSC_CSE')">MSC CSE</li>
+  <li onclick="showPage('view_paper_BSC_ME')">BSC ME</li>
+  <li onclick="showPage('view_paper_BSC_EEE')">BSC EEE</li>
+  <li onclick="showPage('view_paper_BSC_TE')">BSC TE</li>
+  <li onclick="showPage('view_paper_BSC_CEE')">BSC CEE</li>
 </ul>
 
 <style>
@@ -68,12 +553,12 @@ function showPage(page) {
 "view_sections_soruces":`
  
 <ul class="department-list">
-  <li>BSC CSE</li>
-  <li>MSC CSE</li>
-  <li>BSC ME</li>
-  <li>BSC EEE</li>
-  <li>BSC TE</li>
-  <li>BSC CEE</li>
+  <li onclick="showPage('view_soruces_BSC_CSE')">BSC CSE</li>
+  <li onclick="showPage('view_soruces_MSC_CSE')">MSC CSE</li>
+  <li onclick="showPage('view_soruces_BSC_ME')">BSC ME</li>
+  <li onclick="showPage('view_soruces_BSC_EEE')">BSC EEE</li>
+  <li onclick="showPage('view_soruces_BSC_TE')">BSC TE</li>
+  <li onclick="showPage('view_soruces_BSC_CEE')">BSC CEE</li>
 </ul>
 
 <style>
@@ -349,3 +834,16 @@ function showPage(page) {
 
   pageContent.innerHTML = pages[page] || pages["default"];
 }
+
+
+
+document.getElementById('select-semester-btn').addEventListener('click', () => {
+  const semesterSelect = document.getElementById('semester-select');
+  const selectedSemester = semesterSelect.value;
+
+  // Replace 'BSC_CSE' with the selected department (you can dynamically set this)
+  const selectedDepartment = 'BSC_CSE';
+
+  // Fetch and display data for the selected semester
+  fetchSemesterData(selectedDepartment, selectedSemester);
+});
