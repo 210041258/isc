@@ -25,7 +25,7 @@ header {
 
 nav {
   text-align: center;
-  background-color: #ffa07a;
+  background-color: orange;
   padding: 1em;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -34,7 +34,7 @@ nav {
 }
 
 nav button {
-  background-color: #ffa07a;
+  background-color: orange;
   border: none;
   color: #fff;
   padding: 10px 20px;
@@ -50,7 +50,8 @@ nav button {
 }
 
 nav button:hover {
-  background-color: #ff8c00;
+  background-color: white;
+  color: black;
 }
 
 nav button:active {
