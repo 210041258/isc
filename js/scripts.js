@@ -59,8 +59,90 @@ function showPage(page) {
       </div>
     `,
     "study_material": `
-      <h2>Studying Material</h2>
-      <p>Content about study materials</p>
+
+<style> 
+.study-material {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.study-material h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid orange;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.material-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.material-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.material-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.material-item h3 {
+    color: orange;
+    margin-bottom: 10px;
+}
+
+.material-item p {
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.material-item button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.material-item button:hover {
+    background-color: orange;
+}
+</style>
+
+<div class="study-material">
+    <h2>Studying Material</h2>
+    <p>Content about study materials</p>
+    <div class="material-grid">
+        <div class="material-item">
+            <h3>Past Papers</h3>
+            <p>Access past exam papers to practice and prepare.</p>
+            <button onclick="window.location.href='#'">View</button>
+        </div>
+        <div class="material-item">
+            <h3>Reference </h3>
+            <p>Find recommended books and resources for your courses.</p>
+            <button onclick="window.location.href='#'">Explore</button>
+        </div>
+        <div class="material-item">
+            <h3>Video Tutorials</h3>
+            <p>Watch video tutorials to enhance your understanding.</p>
+            <button onclick="window.location.href='#'">Watch</button>
+        </div>
+    </div>
+</div>
+
     `,
     "contact_isc": `
       <style>
@@ -106,22 +188,22 @@ function showPage(page) {
 <p>Get in touch with us:</p>
 <ul class="contact-list">
   <li class="contact-item">
-    <a href="mailto:isc.iut@gmail.com" target="_blank" class="contact-link">
+    <a style="color:orange;" href="mailto:isc.iut@gmail.com" target="_blank" class="contact-link">
       <span class="icon">📧</span> Gmail
     </a>
   </li>
   <li class="contact-item">
-    <a href="https://www.facebook.com/profile.php?id=100095673931230" target="_blank" class="contact-link">
+    <a style="color:orange;" href="https://www.facebook.com/profile.php?id=100095673931230" target="_blank" class="contact-link">
       <span class="icon">📘</span> Facebook
     </a>
   </li>
   <li class="contact-item">
-    <a href="https://www.instagram.com/iut_isc" target="_blank" class="contact-link">
+    <a style="color:orange;" href="https://www.instagram.com/iut_isc" target="_blank" class="contact-link">
       <span class="icon">📸</span> Instagram
     </a>
   </li>
   <li class="contact-item">
-    <a href="https://wa.me/+8801618515277" target="_blank" class="contact-link">
+    <a style="color:orange;" href="https://wa.me/+8801618515277" target="_blank" class="contact-link">
       <span class="icon">💬</span> WhatsApp
     </a>
   </li>
