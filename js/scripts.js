@@ -17,9 +17,18 @@ function showPage(page) {
     case "study_material":
         pageContent.innerHTML = `<h2>Studying Material</h2><p>Content about study materials</p>`;
         break;
-    case "contact_isc":
-        pageContent.innerHTML = `<h2>Contact ISC</h2><p>Content about contact ISC </p> <a href="https://www.isc.ac.in/">Visit Website</a> `;
-        break;
+        case "contact_isc":
+          pageContent.innerHTML = `
+              <h2>Contact ISC</h2>
+              <p>Connect with us:</p>
+              <ul style="list-style-type: none; padding: 0;">
+                  <li><a href="mailto:isc.iut@gmail.com" target="_blank">📧 Gmail</a></li>
+                  <li><a href="https://www.facebook.com/profile.php?id=100095673931230" target="_blank">📘 Facebook</a></li>
+                  <li><a href="https://www.instagram.com/iut_isc" target="_blank">📸 Instagram</a></li>
+                  <li><a href="https://wa.me/008801618515277" target="_blank">💬 WhatsApp</a></li>
+              </ul>
+          `;
+          break;
     case "app_guide":
         pageContent.innerHTML = `  <div class="video-container" style="
         width: 80%;
