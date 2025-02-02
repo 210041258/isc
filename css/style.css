@@ -1,15 +1,14 @@
 body {
   font-family: sans-serif;
+  background:black;
   margin: 0; /* Remove default body margins */
   padding: 0;
-  background-color: #f2f2f2; /* Light gray background */
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Ensure content fills the viewport */
 }
 
 header {
-  background-color: #333; /* Dark gray header */
   color: white;
   padding: 1em;
   text-align: center;
@@ -40,7 +39,6 @@ nav button {
 }
 
 #prayForPalestine {
-  background-color: #f0f0f0; /* Light gray background for Palestine section */
   padding: 1em;
   text-align: center;
 }
@@ -48,7 +46,7 @@ nav button {
 #prayForPalestine img {
   max-width: 100%;
   height: auto;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 footer{
