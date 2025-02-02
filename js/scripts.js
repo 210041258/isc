@@ -120,7 +120,7 @@ function showPage(page) {
     </a>
   </li>
   <li class="contact-item">
-    <a href="https://wa.me/008801618515277" target="_blank" class="contact-link">
+    <a href="https://wa.me/+8801618515277" target="_blank" class="contact-link">
       <span class="icon">💬</span> WhatsApp
     </a>
   </li>
