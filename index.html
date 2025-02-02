@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>IUT-ISC App</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>IUT-ISC Student Portal</h1>
+    <button id="changeLang">Change Language</button>
+  </header>
+
+  <main>
+    <section id="prayForPalestine">
+      <!-- Palestine image/text -->
+    </section>
+
+    <nav>
+      <button onclick="showPage('educational_system')">Educational System Guide</button>
+      <button onclick="showPage('study_material')">Studying Material</button>
+      <button onclick="showPage('contact_isc')">Contact with ISC</button>
+      <button onclick="showPage('app_guide')">App Guide</button>
+      <!-- Add other buttons here -->
+    </nav>
+
+    <div id="pageContent"></div>  <!-- Content will be loaded here -->
+  </main>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
