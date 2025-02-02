@@ -15,6 +15,7 @@ header {
 }
 
 nav {
+  text-align: center;
   background-color: orange; /* Green navigation bar */
   padding: 1em;
 }
