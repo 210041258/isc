@@ -1,13 +1,68 @@
 body {
-    background-color: #000; /* Black background */
-    color: #fff;           /* White text */
-    font-family: sans-serif;
+  font-family: sans-serif;
+  margin: 0; /* Remove default body margins */
+  padding: 0;
+  background-color: #f2f2f2; /* Light gray background */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure content fills the viewport */
+}
+
+header {
+  background-color: #333; /* Dark gray header */
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+nav {
+  background-color: #4CAF50; /* Green navigation bar */
+  padding: 1em;
+}
+
+nav button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#pageContent {
+  padding: 20px;
+  flex-grow: 1; /* Allow content to take up available space */
+}
+
+#prayForPalestine {
+  background-color: #f0f0f0; /* Light gray background for Palestine section */
+  padding: 1em;
+  text-align: center;
+}
+
+#prayForPalestine img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+footer{
+  background-color: #333; /* Dark gray header */
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  nav button {
+    display: block; /* Stack buttons vertically on smaller screens */
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in element width */
   }
-  button {
-    background-color: orange;
-    color: white;
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    cursor: pointer;
-  }
+}

@@ -1,29 +1,31 @@
+const pageContent = document.getElementById('pageContent');
+const navButtons = document.querySelectorAll('nav button');
 
-
-function showPage(pageName) {
-    //Fetch and display the content from firebase instead of local files
-    //This is a HIGHLY simplified example, a real world application would need much more detailed error handling, more sophisticated data fetching and display etc.
-    document.getElementById('pageContent').innerHTML = "Loading " + pageName + "...";
-  
-    switch(pageName){
-      case "study_material":
-        db.collection("studyMaterials").get().then((querySnapshot) => {
-          let html = "<ul>";
-          querySnapshot.forEach((doc) => {
-            html += `<li>${doc.data().title} </li>`;
-          });
-          html += "</ul>";
-          document.getElementById('pageContent').innerHTML = html;
-        });
-        break;
-      // add other cases for different pages
-    }
-  }
-
-//Example for Language change (very basic - needs improvement)
-document.getElementById('changeLang').addEventListener('click', () => {
-  // Simple alert for now -  replace with actual language switching logic
-  alert('Language change functionality not yet implemented.');
+navButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const page = button.dataset.page;
+    showPage(page);
+  });
 });
 
-  // Import the functions you need from the SDKs you need
+
+function showPage(page) {
+  //Simple content switching, replace with actual page content loading
+  switch(page){
+    case "educational_system":
+        pageContent.innerHTML = `<h2>Educational System Guide</h2><p>Content about educational system</p>`;
+        break;
+    case "study_material":
+        pageContent.innerHTML = `<h2>Studying Material</h2><p>Content about study materials</p>`;
+        break;
+    case "contact_isc":
+        pageContent.innerHTML = `<h2>Contact ISC</h2><p>Contact information for ISC</p>`;
+        break;
+    case "app_guide":
+        pageContent.innerHTML = `<h2>App Guide</h2><p>Guide on how to use the app</p>`;
+        break;
+    default:
+      pageContent.innerHTML = `<h2>Welcome</h2><p>Select a section to view content.</p>`;
+
+  }
+}
