@@ -31,6 +31,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1;
+  font-weight: bold;
 }
 
 nav button {
@@ -41,10 +42,11 @@ nav button {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 18px;
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 5px;
+  font-weight: bold;
   transition: background-color 0.3s ease;
   outline: none;
 }

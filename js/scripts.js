@@ -11,14 +11,114 @@ navButtons.forEach(button => {
 
 function showPage(page) {
   const pages = {
-"view_sections_video":`
-
-`,
 "view_sections_paper":`
-  
+<ul class="department-list">
+  <li>BSC CSE</li>
+  <li>MSC CSE</li>
+  <li>BSC ME</li>
+  <li>BSC EEE</li>
+  <li>BSC TE</li>
+  <li>BSC CEE</li>
+</ul>
+
+<style>
+  .department-list {
+    list-style: none;
+    margin-top: 25px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .department-list li {
+    padding: 15px;
+    margin: 10px 0;
+    background: #f8f9fa;
+    border-radius: 8px;
+    font-weight: 600;
+    color: orange;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+  }
+
+  .department-list li:hover {
+    transform: translateX(10px);
+    background: #e9ecef;
+    border-color: #3498db;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2);
+  }
+
+  .department-list li:active {
+    transform: translateX(5px);
+    background: #dde1e4;
+  }
+
+  @media (max-width: 480px) {
+    .department-list li {
+      padding: 12px;
+      font-size: 0.9rem;
+    }
+  }
+</style>
 `,
 "view_sections_soruces":`
+ 
+<ul class="department-list">
+  <li>BSC CSE</li>
+  <li>MSC CSE</li>
+  <li>BSC ME</li>
+  <li>BSC EEE</li>
+  <li>BSC TE</li>
+  <li>BSC CEE</li>
+</ul>
 
+<style>
+  .department-list {
+    list-style: none;
+    margin-top: 25px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .department-list li {
+    padding: 15px;
+    margin: 10px 0;
+    background: #f8f9fa;
+    border-radius: 8px;
+    font-weight: 600;
+    color: orange;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+  }
+
+  .department-list li:hover {
+    transform: translateX(10px);
+    background: #e9ecef;
+    border-color: #3498db;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2);
+  }
+
+  .department-list li:active {
+    transform: translateX(5px);
+    background: #dde1e4;
+  }
+
+  @media (max-width: 480px) {
+    .department-list li {
+      padding: 12px;
+      font-size: 0.9rem;
+    }
+  }
+</style>
 `,
      "educational_system": `
       <style>
@@ -79,7 +179,7 @@ function showPage(page) {
 }
 
 .study-material h2 {
-    color: #2c3e50;
+    color: orange;
     border-bottom: 2px solid orange;
     padding-bottom: 10px;
     margin-bottom: 20px;
@@ -143,11 +243,6 @@ function showPage(page) {
             <h3>Reference</h3>
             <p>Find recommended books and resources for your courses.</p>
             <button onclick="showPage('view_sections_soruces')">Explore</button>
-        </div>
-        <div class="material-item">
-            <h3>Video Tutorials</h3>
-            <p>Watch video tutorials to enhance your understanding.</p>
-            <button onclick="showPage('view_sections_video')">Watch</button>
         </div>
     </div>
 </div>
