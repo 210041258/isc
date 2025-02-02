@@ -10,7 +10,6 @@ navButtons.forEach(button => {
 
 
 function showPage(page) {
-  //Simple content switching, replace with actual page content loading
   switch(page){
     case "educational_system":
         pageContent.innerHTML = `<h2>Educational System Guide</h2><p>Content about educational system</p>`;
