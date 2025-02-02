@@ -42,13 +42,14 @@ function showPage(page) {
           </style>
           <h2>Educational System Guide</h2>
           <p>Content about educational system</p>
-          <div class="educational-buttons">
-              <button class="educational-button">SENIOR ADVICES</button>
-              <button class="educational-button">EDUCATION SYSTEM RULES</button>
-              <button class="educational-button">IUT ROUTINE AND CALENDAR</button>
-              <button class="educational-button">IUT GUIDE</button>
-              <button class="educational-button">ACADEMIC CATALOGUE</button>
-          </div>
+<div class="educational-buttons">
+    <button class="educational-button" onclick="window.location.href='/senior-advices'">SENIOR ADVICES</button>
+    <button class="educational-button" onclick="window.location.href='/education-system-rules'">EDUCATION SYSTEM RULES</button>
+    <button class="educational-button" onclick="window.location.href='/iut-routine-and-calendar'">IUT ROUTINE AND CALENDAR</button>
+    <button class="educational-button" onclick="window.location.href='https://www.iutoic-dhaka.edu/uploads/pdf/1695099698_1824.pdf'">IUT GUIDE</button>
+    <button class="educational-button" onclick="window.location.href='https://fet.iutoic-dhaka.edu/uploads/pdf/1713278609_1495.pdf'">CSE Academic Catalogue</button>
+    <button class="educational-button" onclick="window.location.href='https://eee.iutoic-dhaka.edu/uploads/pdf/1594983565_1336.pdf'">EEE Academic Catalogue</button>
+    <button class="educational-button" onclick="window.location.href='https://mpe.iutoic-dhaka.edu/uploads/pdf/1660834423_1194.pdf'">MPE Academic Catalogue</button></div>
       `;
       break;
     case "study_material":
