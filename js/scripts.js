@@ -151,7 +151,7 @@ function showPage(page) {
     </div>
 
 <p style="text-align: center; margin-top: 20px; font-weight: bold;">
-  <a style="color:white; background-color: ORANGE; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; text-decoration: none;" href="https://drive.google.com/file/d/159sgJ00Y-vvY_tY3hqND1QrbW8CLzTj0/view" target="_blank">DOWNLOAD ANDROID APPLICATION</a>
+  <a style="color:white; background-color: ORANGE; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; text-decoration: none;" href="https://www.dropbox.com/scl/fi/kmunhpvq2u4e5dat729a1/student_support_release.apk" target="_blank">DOWNLOAD ANDROID APPLICATION</a>
 </p>
     `,
     "default": `
