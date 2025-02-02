@@ -16,12 +16,12 @@ header {
 }
 
 nav {
-  background-color: #4CAF50; /* Green navigation bar */
+  background-color: orange; /* Green navigation bar */
   padding: 1em;
 }
 
 nav button {
-  background-color: #4CAF50;
+  background-color: orange;
   border: none;
   color: white;
   padding: 10px 20px;
