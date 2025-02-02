@@ -11,7 +11,179 @@ navButtons.forEach(button => {
 
 function showPage(page) {
   const pages = {
-    "educational_system": `
+"view_sections_video":`
+  <style>
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .video-item {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .video-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .video-item h3 {
+      color: orange;
+      margin-bottom: 10px;
+    }
+
+    .video-item p {
+      color: #7f8c8d;
+      margin-bottom: 15px;
+    }
+
+    .video-item iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      border-radius: 10px;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+  </style>
+
+  <div class="video-grid">
+    <div class="video-item">
+      <h3>Video Tutorial 1</h3>
+      <p>Watch video tutorial 1 to enhance your understanding.</p>
+      <iframe src="https://www.youtube.com/embed/video1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="video-item">
+      <h3>Video Tutorial 2</h3>
+      <p>Watch video tutorial 2 to enhance your understanding.</p>
+      <iframe src="https://www.youtube.com/embed/video2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="video-item">
+      <h3>Video Tutorial 3</h3>
+      <p>Watch video tutorial 3 to enhance your understanding.</p>
+      <iframe src="https://www.youtube.com/embed/video3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+`,
+"view_sections_paper":`
+  <style>
+    .paper-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .paper-item {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .paper-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .paper-item h3 {
+      color: orange;
+      margin-bottom: 10px;
+    }
+
+    .paper-item p {
+      color: #7f8c8d;
+      margin-bottom: 15px;
+    }
+
+    .paper-item a {
+      text-decoration: none;
+      color: orange;
+    }
+  </style>
+
+  <div class="paper-grid">
+    <div class="paper-item">
+      <h3>Past Paper 1</h3>
+      <p>Access past paper 1 to practice and prepare.</p>
+      <a href="https://www.example.com/past-paper-1.pdf" target="_blank">Download</a>
+    </div>
+    <div class="paper-item">
+      <h3>Past Paper 2</h3>
+      <p>Access past paper 2 to practice and prepare.</p>
+      <a href="https://www.example.com/past-paper-2.pdf" target="_blank">Download</a>
+    </div>
+    <div class="paper-item">
+      <h3>Past Paper 3</h3>
+      <p>Access past paper 3 to practice and prepare.</p>
+      <a href="https://www.example.com/past-paper-3.pdf" target="_blank">Download</a>
+    </div>
+  </div>
+`,
+"view_sections_soruces":`
+  <style>
+    .source-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .source-item {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .source-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .source-item h3 {
+      color: orange;
+      margin-bottom: 10px;
+    }
+
+    .source-item p {
+      color: #7f8c8d;
+      margin-bottom: 15px;
+    }
+
+    .source-item a {
+      text-decoration: none;
+      color: orange;
+    }
+  </style>
+
+  <div class="source-grid">
+    <div class="source-item">
+      <h3>Source 1</h3>
+      <p>Find recommended books and resources for your courses.</p>
+      <a href="https://www.example.com/source-1.pdf" target="_blank">Explore</a>
+    </div>
+    <div class="source-item">
+      <h3>Source 2</h3>
+      <p>Find recommended books and resources for your courses.</p>
+      <a href="https://www.example.com/source-2.pdf" target="_blank">Explore</a>
+    </div>
+    <div class="source-item">
+      <h3>Source 3</h3>
+      <p>Find recommended books and resources for your courses.</p>
+      <a href="https://www.example.com/source-3.pdf" target="_blank">Explore</a>
+    </div>
+  </div>
+`,
+     "educational_system": `
       <style>
 .educational-buttons {
   display: flex;
@@ -128,17 +300,17 @@ function showPage(page) {
         <div class="material-item">
             <h3>Past Papers</h3>
             <p>Access past exam papers to practice and prepare.</p>
-            <button onclick="window.location.href='#'">View</button>
+            <button onclick="showPage('view_sections_paper')">View</button>
         </div>
         <div class="material-item">
-            <h3>Reference </h3>
+            <h3>Reference</h3>
             <p>Find recommended books and resources for your courses.</p>
-            <button onclick="window.location.href='#'">Explore</button>
+            <button onclick="showPage('view_sections_soruces')">Explore</button>
         </div>
         <div class="material-item">
             <h3>Video Tutorials</h3>
             <p>Watch video tutorials to enhance your understanding.</p>
-            <button onclick="window.location.href='#'">Watch</button>
+            <button onclick="showPage('view_sections_video')">Watch</button>
         </div>
     </div>
 </div>
